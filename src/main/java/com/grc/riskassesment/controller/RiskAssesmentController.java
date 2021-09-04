@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController()
 @RequestMapping("/api/v1/risk")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class RiskAssesmentController {
     @Autowired
     RiskAssesmentService riskAssesmentService;
