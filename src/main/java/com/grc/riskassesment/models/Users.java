@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 
 @Document(collection = "users")
 @Data
@@ -24,4 +26,5 @@ public class Users {
     private String login;
     private String password;
     private boolean isAdmin;
+    private List allowedRiskAccess;
 }

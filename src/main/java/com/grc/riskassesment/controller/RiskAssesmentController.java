@@ -51,6 +51,10 @@ public class RiskAssesmentController {
         Risks newRisk = riskAssesmentService.saveRisk(risk);
         return new ApiResponse("200","Risk Saved",newRisk);
     }
+    @PostMapping("/login")
+    public ApiResponse login(@RequestParam String loginId,@RequestParam String password){
+        return riskAssesmentService.userLogin(loginId,password);
+    }
 
 
 }
